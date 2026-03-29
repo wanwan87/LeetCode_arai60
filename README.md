@@ -29,4 +29,5 @@ https://docs.google.com/document/d/1bjbOSs-Ac0G_cjVzJ2Qd8URoU_0BNirZ8utS3CUAeLE/
   - 過去に解いている人の中で気に入った人を探しておくといいのではないか
 
 
-##
+## コードアップロード/Pull Requestの作り方
+https://note.com/iroha_afternoon/n/ne741c6d6f84e
