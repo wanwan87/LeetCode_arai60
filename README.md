@@ -8,7 +8,8 @@ https://docs.google.com/document/d/1bjbOSs-Ac0G_cjVzJ2Qd8URoU_0BNirZ8utS3CUAeLE/
 進め方の自由度は高く、特別にこれでなくてはいけないということはない。
 
 
-問題については、新井康平さんの問題集(https://1kohei1.com/leetcode/)を使う人が多い。AtCoder や ICPC の問題を送ってくる人もいる。ただ、過去に解いた人がいる問題を解くと、以前に解いた人からコメントが貰える。上記が難しすぎる場合には、https://www.learnpython.org/ を使っている人もいる。
+問題については、新井康平さんの問題集(https://1kohei1.com/leetcode/)
+を使う人が多い。AtCoder や ICPC の問題を送ってくる人もいる。ただ、過去に解いた人がいる問題を解くと、以前に解いた人からコメントが貰える。上記が難しすぎる場合には、https://www.learnpython.org/ を使っている人もいる。
 
 
 初期には、下のようなルールを提示した。
