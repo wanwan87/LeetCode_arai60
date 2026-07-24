@@ -1,0 +1,91 @@
+https://discord.com/channels/1084280443945353267/1366778718705553520/1450943270799671337
+自分の言語で完走した人を2,3人探し、その中の回答を使って Step. 3 をする。つまり、暗記して見ずに10分以内で安定して(3回くらい)書けるようにする。
+これで一問完了です。想定、1問1時間くらいでしょうか。覚えたやつはレビューを依頼する必要はないですが GitHub に元へのリンクと共においておけばいいでしょう。
+
+# step3
+- https://github.com/olsen-blue/Arai60/pull/61
+- https://github.com/tokuhirat/LeetCode/pull/60/changes
+
+
+```py
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        # numRowsが1の時、与えられたsが回答
+        if numRows == 1:
+            return s
+        # numRowsの数値を使用しないので、_を使っている。回数繰り返しているだけ。　
+        row_to_letters = [[] for _ in range(numRows)]
+        # 行の位置。numRowsが3だったら、row_indexは0~2で動く
+        row_index = 0
+        # 進む方向。ジグザグの進む方向、numRowsが3で[P][A][Y]まで来たときに次のPを [P][A,P][Y]に入れるように折り返す。
+        direction = 1
+        # 入力sをletterで回す
+        for letter in s:
+            # 配列に追加
+            row_to_letters[row_index].append(letter)
+            # 次の行へ。directionが-1のときは折り返す
+            row_index += direction
+            # 0の時と、行の最後まで来たときにdirectionの符号を反転して折り返す
+            if row_index == 0 or row_index == numRows -1:
+                direction *= -1
+        # "".joinはくぎりもじなしでの連結。"-".join()はP-A-A-Pのように連結
+        return "".join(c for row in row_to_letters for c in row)
+        
+        # result = []
+        # for row in row_to_letters:
+        #     for c in row:
+        #         result.append(c)
+        # "".join(result)
+
+```
+```py
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if numRows == 1:
+            return s
+        row_to_letters = [[] for _ in range(numRows)]
+        row_index = 0
+        direction = 1
+        for letter in s:
+            row_to_letters[row_index].append(letter)
+            row_index += direction
+            if row_index == 0 or row_index == numRows-1:
+                direction *= -1
+        return "".join(c for row in row_to_letters for c in row)
+```
+
+- numsRowsは0以上
+
+
+```py
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if numRows == 1:
+            return s
+        row_to_letters = [[] for _ in range(numRows)]
+        row_index = 0
+        direction = 1
+        for letter in s:
+            row_to_letters[row_index].append(letter)
+            row_index += direction
+            if row_index == 0 or row_index == numRows-1:
+                direction *= -1
+        return "".join(c for row in row_to_letters for c in row)
+
+```
+```py
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if numRows == 1:
+            return s
+        row_to_letter = [[] for _ in range(numRows)]
+        row_index = 0
+        direction = 1
+        for letter in s:
+            row_to_letter[row_index].append(letter)
+            row_index += direction
+            if row_index == 0 or row_index == numRows - 1:
+                direction *= -1
+        return "".join(c for row in row_to_letter for c in row)
+
+```
