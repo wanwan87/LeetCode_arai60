@@ -55,3 +55,37 @@ class Solution:
 ```
 
 - numsRowsは0以上
+
+
+```py
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if numRows == 1:
+            return s
+        row_to_letters = [[] for _ in range(numRows)]
+        row_index = 0
+        direction = 1
+        for letter in s:
+            row_to_letters[row_index].append(letter)
+            row_index += direction
+            if row_index == 0 or row_index == numRows-1:
+                direction *= -1
+        return "".join(c for row in row_to_letters for c in row)
+
+```
+```py
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if numRows == 1:
+            return s
+        row_to_letter = [[] for _ in range(numRows)]
+        row_index = 0
+        direction = 1
+        for letter in s:
+            row_to_letter[row_index].append(letter)
+            row_index += direction
+            if row_index == 0 or row_index == numRows - 1:
+                direction *= -1
+        return "".join(c for row in row_to_letter for c in row)
+
+```
